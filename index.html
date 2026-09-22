@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AMAZING SOCIETY is a non-profit, non-political and non-partisan community-based organization focused on youth empowerment, mentorship, dignity support, health education, career development, elderly care and community service in Kenya.">
+  <meta name="keywords" content="Amazing Society, Kenya, youth empowerment, mentorship, community service, menstrual hygiene, career development, elderly care">
+  <meta name="author" content="AMAZING SOCIETY">
+  <meta name="theme-color" content="#123B70">
+
+  <meta property="og:title" content="AMAZING SOCIETY | Empowering People. Restoring Dignity.">
+  <meta property="og:description" content="Transforming communities through youth empowerment, mentorship, dignity support, health education, career development, elderly care and community service.">
+  <meta property="og:type" content="website">
+
+  <title>AMAZING SOCIETY | Empowering People. Restoring Dignity.</title>
+
+  <style>
+    :root {
+      --blue: #123B70;
+      --blue-dark: #08264d;
+      --blue-light: #eaf2fb;
+      --pink: #e85d9e;
+      --pink-light: #fff0f7;
+      --gold: #d9a441;
+      --white: #ffffff;
+      --text: #263447;
+      --muted: #667085;
+      --light: #f7f9fc;
+      --border: #e5eaf0;
+      --shadow: 0 12px 35px rgba(8, 38, 77, .10);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--blue);
+      letter-spacing: .5px;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, var(--blue), #1f67b7);
+      font-size: 20px;
+      box-shadow: 0 7px 18px rgba(18,59,112,.22);
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-weight: 500;
+      letter-spacing: 0;
+      font-size: 11px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover { color: var(--pink); }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: var(--blue-light);
+      color: var(--blue);
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      background:
+        radial-gradient(circle at 85% 20%, rgba(232,93,158,.18), transparent 28%),
+        radial-gradient(circle at 10% 80%, rgba(217,164,65,.16), transparent 25%),
+        linear-gradient(135deg, #08264d 0%, #123B70 55%, #1e5e9f 100%);
+      color: white;
+      padding: 105px 0 95px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: .98;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span { color: #ffd2e7; }
+
+    .hero p {
+      max-width: 680px;
+      font-size: 18px;
+      color: #eaf3ff;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 48px;
+      padding: 0 21px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 14px;
+      border: 1px solid transparent;
+      transition: .2s ease;
+    }
+
+    .btn-primary {
+      background: var(--pink);
+      color: white;
+      box-shadow: 0 8px 22px rgba(232,93,158,.25);
+    }
+
+    .btn-primary:hover { transform: translateY(-2px); }
+
+    .btn-outline {
+      border-color: rgba(255,255,255,.45);
+      color: white;
+      background: rgba(255,255,255,.06);
+    }
+
+    .btn-outline:hover { background: rgba(255,255,255,.14); }
+
+    .hero-card {
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.10);
+      border-radius: 24px;
+      box-shadow: 0 20px 55px rgba(0,0,0,.15);
+    }
+
+    .hero-card h3 { margin-bottom: 13px; font-size: 21px; }
+
+    .hero-card p {
+      font-size: 15px;
+      margin-bottom: 18px;
+      color: #e8f0fa;
+    }
+
+    .quote {
+      border-left: 3px solid var(--pink);
+      padding-left: 15px;
+      font-weight: 700;
+    }
+
+    /* General sections */
+    section { padding: 85px 0; }
+
+    .section-head {
+      max-width: 760px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .section-label {
+      color: var(--pink);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-head h2 {
+      color: var(--blue-dark);
+      font-size: clamp(30px, 4vw, 45px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .section-head p { color: var(--muted); }
+
+    .vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .info-card {
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      background: white;
+    }
+
+    .info-card h3 {
+      color: var(--blue);
+      margin-bottom: 13px;
+      font-size: 24px;
+    }
+
+    .info-card p { color: var(--muted); }
+
+    /* Programs */
+    .programs { background: var(--light); }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .program {
+      padding: 27px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: white;
+      transition: .2s ease;
+    }
+
+    .program:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--blue-light);
+      color: var(--blue);
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
+
+    .program:nth-child(3) .icon,
+    .program:nth-child(4) .icon { background: var(--pink-light); color: var(--pink); }
+
+    .program h3 { color: var(--blue-dark); margin-bottom: 8px; }
+    .program p { color: var(--muted); font-size: 14px; }
+
+    /* Values */
+    .values {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .value {
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: var(--blue-light);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, #fff0f7, #edf5ff);
+    }
+
+    .cta-box {
+      text-align: center;
+      padding: 60px 25px;
+      border-radius: 26px;
+      border: 1px solid var(--border);
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box h2 {
+      color: var(--blue-dark);
+      font-size: clamp(30px, 4vw, 46px);
+      margin-bottom: 14px;
+    }
+
+    .cta-box p {
+      max-width: 680px;
+      margin: 0 auto 26px;
+      color: var(--muted);
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 25px;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: grid;
+      gap: 15px;
+      margin-top: 18px;
+    }
+
+    .contact-list li {
+      padding: 15px;
+      background: var(--light);
+      border-radius: 12px;
+    }
+
+    .contact-list strong { color: var(--blue); }
+
+    .contact-note {
+      padding: 30px;
+      border-radius: var(--radius);
+      background: var(--blue);
+      color: white;
+    }
+
+    .contact-note h3 { margin-bottom: 12px; font-size: 25px; }
+    .contact-note p { color: #dceaff; }
+
+    /* Footer */
+    footer {
+      background: #071d38;
+      color: #dbe7f5;
+      padding: 45px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 35px;
+    }
+
+    footer h3 { color: white; margin-bottom: 12px; }
+    footer p, footer li { color: #b9c9dc; font-size: 14px; }
+    footer ul { list-style: none; display: grid; gap: 8px; }
+
+    .copyright {
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      font-size: 12px;
+      color: #94a9c0;
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        left: 4%;
+        right: 4%;
+        top: 70px;
+        padding: 18px;
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav-links.show { display: flex; }
+      .menu-btn { display: block; }
+
+      .hero-grid,
+      .vision-grid,
+      .contact-grid { grid-template-columns: 1fr; }
+
+      .program-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 570px) {
+      .hero { padding: 75px 0 65px; }
+      section { padding: 65px 0; }
+      .program-grid,
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 48px; }
+      .hero p { font-size: 16px; }
+      .buttons .btn { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="AMAZING SOCIETY home">
+        <span class="brand-mark">A</span>
+        <span>
+          AMAZING SOCIETY
+          <small>Community • Dignity • Transformation</small>
+        </span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#values">Values</a></li>
+        <li><a href="#get-involved">Get Involved</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">🇰🇪 Community-Based Organization • Kenya</div>
+          <h1>Empowering People.<br><span>Restoring Dignity.</span></h1>
+          <p>
+            AMAZING SOCIETY works to transform communities through youth empowerment,
+            mentorship, dignity support, health education, career development,
+            elderly care, Christian values and community service.
+          </p>
+
+          <div class="buttons">
+            <a href="#programs" class="btn btn-primary">Explore Our Programs</a>
+            <a href="#get-involved" class="btn btn-outline">Get Involved</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h3>Our Purpose</h3>
+          <p>
+            We are committed to serving communities with compassion, integrity,
+            accountability and respect for human dignity.
+          </p>
+          <div class="quote">
+            Creating opportunities for people and communities to thrive.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">Who We Are</div>
+          <h2>Building stronger, empowered and dignified communities.</h2>
+          <p>
+            AMAZING SOCIETY is a non-profit, non-political and non-partisan
+            community-based organization established to serve and empower communities.
+          </p>
+        </div>
+
+        <div class="vision-grid">
+          <article class="info-card">
+            <h3>Our Vision</h3>
+            <p>
+              To see transformed, empowered and dignified communities where young
+              people and vulnerable persons have opportunities to thrive and reach
+              their full potential.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Our Mission</h3>
+            <p>
+              To transform communities through youth empowerment, mentorship,
+              Christian values, dignity support, health education, elderly care,
+              career development and community service.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="programs" id="programs">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">Our Programs</div>
+          <h2>Where we make a difference</h2>
+          <p>
+            Our programs respond to community needs while creating opportunities
+            for growth, dignity, service and positive transformation.
+          </p>
+        </div>
+
+        <div class="program-grid">
+          <article class="program">
+            <div class="icon">👥</div>
+            <h3>Youth Empowerment</h3>
+            <p>Mentorship, life skills, leadership development, talent development and community engagement.</p>
+          </article>
+
+          <article class="program">
+            <div class="icon">🎓</div>
+            <h3>Career Empowerment</h3>
+            <p>Career guidance, professional mentorship, career talks, networking, entrepreneurship and employability support.</p>
+          </article>
+
+          <article class="program">
+            <div class="icon">🩺</div>
+            <h3>Health & SRH Mentorship</h3>
+            <p>Responsible mentorship on sexual and reproductive health, personal safety, healthy relationships and appropriate health information.</p>
+          </article>
+
+          <article class="program">
+            <div class="icon">🩷</div>
+            <h3>Menstrual Hygiene & Dignity</h3>
+            <p>Menstrual hygiene education, sanitary support, dignity kits and mentorship aimed at reducing menstrual stigma.</p>
+          </article>
+
+          <article class="program">
+            <div class="icon">👵</div>
+            <h3>Elderly & Community Care</h3>
+            <p>Visits, companionship, outreach and appropriate material, social and emotional support for elderly persons in need.</p>
+          </article>
+
+          <article class="program">
+            <div class="icon">✝️</div>
+            <h3>Christian Mentorship</h3>
+            <p>Mentorship founded on love, compassion, integrity, forgiveness, service, responsibility and respect.</p>
+          </article>
+
+          <article class="program">
+            <div class="icon">🤝</div>
+            <h3>Community Transformation</h3>
+            <p>Community needs assessment, volunteerism, social responsibility, resource mobilization and community service.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="values">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">What Guides Us</div>
+          <h2>Our Core Values</h2>
+          <p>These values guide how AMAZING SOCIETY serves communities and works with members, volunteers and partners.</p>
+        </div>
+
+        <div class="values">
+          <span class="value">Integrity</span>
+          <span class="value">Compassion</span>
+          <span class="value">Service</span>
+          <span class="value">Accountability</span>
+          <span class="value">Human Dignity</span>
+          <span class="value">Love</span>
+          <span class="value">Inclusivity</span>
+          <span class="value">Transparency</span>
+          <span class="value">Empowerment</span>
+          <span class="value">Teamwork</span>
+          <span class="value">Excellence</span>
+          <span class="value">Christian Principles</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="get-involved">
+      <div class="container">
+        <div class="cta-box">
+          <div class="section-label">Get Involved</div>
+          <h2>Be part of the transformation.</h2>
+          <p>
+            AMAZING SOCIETY may work with individuals, churches, schools, government
+            institutions, health facilities, community organizations, NGOs, private
+            organizations, development partners and other relevant stakeholders.
+          </p>
+
+          <div class="buttons" style="justify-content:center;">
+            <a href="#contact" class="btn btn-primary">Contact Us</a>
+            <a href="#programs" class="btn" style="background:var(--blue-light); color:var(--blue);">Our Programs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">Contact</div>
+          <h2>Let's connect</h2>
+          <p>Replace the placeholders below with AMAZING SOCIETY's official contact details before publishing.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="info-card">
+            <h3>AMAZING SOCIETY</h3>
+            <ul class="contact-list">
+              <li><strong>Location:</strong><br>Kenya</li>
+              <li><strong>Email:</strong><br><span>YOUR OFFICIAL EMAIL</span></li>
+              <li><strong>Phone:</strong><br><span>YOUR OFFICIAL PHONE NUMBER</span></li>
+              <li><strong>Social Media:</strong><br><span>YOUR OFFICIAL SOCIAL HANDLES</span></li>
+            </ul>
+          </div>
+
+          <div class="contact-note">
+            <h3>Our Commitment</h3>
+            <p>
+              We seek to empower young people to realize their potential, support
+              vulnerable and elderly persons, promote health awareness and dignity,
+              and create opportunities for career and personal development.
+            </p>
+            <br>
+            <p><strong>Empowering people. Restoring dignity. Transforming communities.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>AMAZING SOCIETY</h3>
+          <p>
+            A non-profit, non-political and non-partisan community-based organization
+            committed to serving and empowering communities.
+          </p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#values">Core Values</a></li>
+            <li><a href="#get-involved">Get Involved</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>Kenya</li>
+            <li>YOUR OFFICIAL EMAIL</li>
+            <li>YOUR OFFICIAL PHONE</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © 2026 AMAZING SOCIETY. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => navLinks.classList.remove("show"));
+    });
+  </script>
+
+</body>
+</html>
